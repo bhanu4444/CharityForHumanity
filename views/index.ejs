@@ -1,0 +1,28 @@
+<% include partials/header %> 
+<div class = "container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1> Welcome To Charity for Humanity!</h1>
+            <p></p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/charities/new">Donate</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="card-deck">
+                <% charities.forEach(function(charity){ %>
+                    <div class=" col-sm-6 col-md-6 card w-75" style="width: 18rem;">
+                        <img class="card-img-top img-thumbnail" src="<%= charity.image %>" alt="Card image cap">
+                        <div class="card-body ">
+                            <h4 class="card-text "><%= charity.name %></h4>
+                            <p>LIdoifjkjflkkjslkfjdkl</p>
+                            <a class="btn btn-primary btn-lg" href="/charities/show">More Info</a>
+
+                        </div>
+                    </div>
+                <% }); %>
+    </div>
+</div>
+     
+<% include partials/footer %>
