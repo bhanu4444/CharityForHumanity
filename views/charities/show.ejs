@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<div class="row">
+    
+    <div class="col-md-9 container">
+        <div class="thumbnail">
+            <img class="img-responsive" src="<%= charity.image %>">
+            <div class="caption-full">
+                
+                <h4><a><%=charity.name%></a></h4>
+                <p><%=charity.description %></p>
+                <a class="btn btn-warning" href="/charities/<%=charity._id%>/edit">Edit</a>
+                <form action="/charities/<%=charity._id %>?_method=DELETE" method="POST" class="delete-form">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<% include ../partials/footer %>

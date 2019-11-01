@@ -45,22 +45,22 @@ h1 {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url("../photos/poor-3027368_1920.jpg");
+  background-image: url("../images/poor-3027368_1920.jpg");
 }
 .slideshow li:nth-child(2) { 
-  background-image: url("../photos/african-2044961_1920.jpg");
+  background-image: url("../images/african-2044961_1920.jpg");
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url("../photos/people-1550501_1920.jpg");
+  background-image: url("../images/people-1550501_1920.jpg");
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url("../photos/poor-2382641_1920.jpg");
+  background-image: url("../images/poor-2382641_1920.jpg");
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url("../photos/achievement-3556674_1920.jpg");
+  background-image: url("../images/achievement-3556674_1920.jpg");
   animation-delay: 40s; 
 }
 
@@ -84,4 +84,8 @@ h1 {
 /* Older browser support - .no-cssanimations class added by modernizr */
 .no-cssanimations .slideshow li {
     opacity: 1;
+}
+
+.navbar {
+  z-index: 1;
 }

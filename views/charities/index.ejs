@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1> Welcome To Charity for Humanity! </h1>
+            <h1>Lend a helping hand</h1>
+            <p></p>
+            <p> <a class="btn btn-outline-warning " href=#>Donate</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row container">
+        <% charities.forEach(function(charity){ %>
+        <div class=" col-sm-12 col-md-6">
+            <div class="card">
+                <img class="card-img-top img-thumbnail" src="<%= charity.image %>" alt="Card image cap">
+                <div class="card-body ">
+                    <h4 class="card-text "><%= charity.name %></h4>
+                    <p>
+                        <a href="/charities/<%= charity._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                    
+                </div>
+            </div>
+
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
