@@ -18,7 +18,7 @@
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="/images/logo.svg" width="70" height="40" alt="">
-                CharityForHumanity
+                Charity For Humanity
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,15 +31,21 @@
                         <a class="nav-link" href="#"> Support<span class="sr-only"></span></a>
                     </li>
                     
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">SignUp</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">LogOut</a>
-                    </li>
+                    <% if(!currentUser) {  %>
+                        <li class="nav-item ">
+                        <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/register">SignUp</a>
+                     </li>
+                    <%} else  { %>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-success" href="#">Signed in as <%=currentUser.username%></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">LogOut</a>
+                        </li>
+                    <% } %>
                     <li class="nav-item ">
                         <a class="btn btn-outline-warning " href="/charities/new">Donate</a>
                     </li>
@@ -49,8 +55,8 @@
     
     </nav>
     <div id="landing-header">
-        <h1>Welcome to Charity For Humanity, a place where you can donate and help fight enemies of humanity.</h1>
-        <a href="/charities" class="btn  btn-success">Get Started</a>
+        <h3>Welcome to Charity For Humanity</h3> <h3>A place where you can donate and help fight biggest enemies of humanity.</h3>
+        <p><a href="/charities" class="btn  btn-success">Get Started</a></p>
     </div>
 
     <ul class="slideshow">

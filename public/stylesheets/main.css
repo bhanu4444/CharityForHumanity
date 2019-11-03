@@ -74,3 +74,33 @@ h1 {
   margin-bottom: 1rem;
   border-radius: 0 0 5% 5%;
 }
+
+@media screen and (min-width: 721px) {
+    /* Write your CSS properties here */
+    #carouselExampleControls{
+      margin-left: 30%;
+      
+  }
+}
+@media screen and (max-width: 720px) {
+    /* Write your CSS properties here */
+    #carouselExampleControls{
+      margin-left: 0;
+      
+  }
+}
+
+.carousel{
+  width:400px;
+}
+.item img{
+  object-fit:cover;
+  height:500px !important;
+  
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
